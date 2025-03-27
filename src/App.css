@@ -1,9 +1,16 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 /* Global */
+a {
+  cursor: pointer;
+}
+
 .title {
   font-family: Work Sans;
   font-weight: 600;
@@ -473,41 +480,43 @@
   .intro-wrapper {
     padding: 32px;
 
-    .profil-image{
+    .profil-image {
       margin-bottom: 2rem;
     }
-    .heading{
+
+    .heading {
       font-size: 30px;
       line-height: 34px;
       margin-bottom: 2rem;
     }
   }
 
-  .discuss-project-section{
+  .discuss-project-section {
     padding: 50px 0px;
 
-    .description{
+    .description {
       text-align: left;
     }
   }
 
-  .footer-card{
+  .footer-card {
     padding: 12px !important;
   }
 
-  .row{
+  .row {
     margin: 0 !important;
   }
-  
-  .hero-heading{
+
+  .hero-heading {
     font-size: 56px;
     line-height: 64px;
   }
 
-  .bottom-footer{
+  .bottom-footer {
     padding: 50px 0px;
   }
-  .copyright{
+
+  .copyright {
     margin-top: 1rem;
   }
 }
