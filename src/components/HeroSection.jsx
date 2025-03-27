@@ -71,7 +71,7 @@ const HeroSection = () => {
       <div className="container" style={{ marginTop: "100px" }}>
         {/* Hero content */}
         <div className="row" id="about">
-          <div className="col-md-8">
+          <div className="col-md-6">
             <div className="hero-content">
               <div className="hero-heading my-4">
                 <TypeAnimation
@@ -96,7 +96,7 @@ const HeroSection = () => {
               <AnimatedStat value={58} label="Happy Clients" />
             </div>
           </div>
-          <div className="col-md-4 d-md-block d-none">
+          <div className="col-md-6 d-md-block d-none">
             <div className="profile-image">
               <img className="img-fluid" src={ProfileImage} alt="" />
             </div>
