@@ -4,76 +4,81 @@ import ProfileImage2 from "../assets/profile-2.png";
 import Facebook from "../assets/facebook.svg";
 import Instagram from "../assets/insta.svg";
 import Linkedin from "../assets/linkedin.svg";
+import { TypeAnimation } from "react-type-animation";
+import AnimatedStat from "./StatsBox";
 
 const HeroSection = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="hero-section overflow-auto pb-4">
-       {/* Navbar */}
-       <nav class="navbar navbar-expand-lg mt-5">
-          <div class="container d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <a class="navbar-brand" href="#">
-                Brooklyn
-              </a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                onClick={() => setIsOpen(!isOpen)}
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-            <div
-              className={`collapse navbar-collapse navbar-links ${
-                isOpen ? "show" : ""
-              }`}
-              id="navbarNav"
+    <div className="hero-section overflow-auto pb-4" id="home">
+      {/* Navbar */}
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+              <div className="logo">B</div>
+              <div> Brooklyn</div>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle navigation"
             >
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    Home
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    About
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    Process
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link">Services</a>
-                </li>
-                <li class="nav-item mx-2" style={{ fontWeight: "600" }}>
-                  <a class="btn btn-primary" href="#">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
+              <span class="navbar-toggler-icon"></span>
+            </button>
           </div>
-        </nav>
-      <div className="container">
+          <div
+            className={`collapse navbar-collapse navbar-links ${
+              isOpen ? "show" : ""
+            }`}
+            id="navbarNav"
+          >
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">
+                  About
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">
+                  Portfolio
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">
+                  Services
+                </a>
+              </li>
+              <li class="nav-item mx-2" style={{ fontWeight: "600" }}>
+                <a class="btn btn-primary" href="#contact">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div className="container" style={{ marginTop: "100px" }}>
         {/* Hero content */}
-        <div className="row">
+        <div className="row" id="about">
           <div className="col-md-8">
             <div className="hero-content">
               <div className="hero-heading my-4">
-                Hello, I’m <br />
-                Brooklyn Gilbert
+                <TypeAnimation
+                  sequence={["Hello, I am Brooklyn Gilbert", 1000, "", 500]}
+                  speed={5}
+                  repeat={Infinity}
+                />
               </div>
               <div className="hero-paragraph my-3">
                 I'm a Freelance UI/UX Designer and Developer based in London,
@@ -85,22 +90,13 @@ const HeroSection = () => {
                 <button className="hero-btn btn btn-primary">Say Hello</button>
               </div>
             </div>
-            <div className="d-flex gap-1 align-items-center  mt-5">
-              <div className="stats-box">
-                <div className="heading">15 Y.</div>
-                <div className="text">Experience</div>
-              </div>
-              <div className="stats-box">
-                <div className="heading">250+</div>
-                <div className="text">Project Completed</div>
-              </div>
-              <div className="stats-box">
-                <div className="heading">58</div>
-                <div className="text">Happy Clients</div>
-              </div>
+            <div className="d-flex gap-1 mt-5">
+              <AnimatedStat value={15} suffix=" Y." label="Experience" />
+              <AnimatedStat value={250} suffix="+" label="Projects Completed" />
+              <AnimatedStat value={58} label="Happy Clients" />
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 d-md-block d-none">
             <div className="profile-image">
               <img className="img-fluid" src={ProfileImage} alt="" />
             </div>
@@ -126,7 +122,11 @@ const HeroSection = () => {
                     <a
                       href=""
                       className="d-flex align-items-center justify-content-center"
-                      style={{ background: "#A53DFF", padding: "8px 10px", borderRadius: "4px" }}
+                      style={{
+                        background: "#A53DFF",
+                        padding: "8px 10px",
+                        borderRadius: "4px",
+                      }}
                     >
                       <img src={Linkedin} alt="" />
                     </a>
@@ -149,8 +149,9 @@ const HeroSection = () => {
                   creating stylish, modern websites, web services.
                 </p>
                 <div className="d-flex gap-3">
-                  <button className="btn btn-primary">My Project</button>
-                  <button className="btn btn-outline-primary">Downlaod CV</button>
+                  <button className="btn btn-outline-primary">
+                    Downlaod CV
+                  </button>
                 </div>
               </div>
             </div>

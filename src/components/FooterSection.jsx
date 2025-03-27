@@ -31,7 +31,7 @@ const FooterSection = () => {
     e.target.submit();
   };
   return (
-    <div className="position-relative">
+    <div className="mt-5" id="contact">
       <div className="container footer-section">
         <div className="footer-card">
           <div className="row">
@@ -166,41 +166,30 @@ const FooterSection = () => {
       </div>
       <div className="bottom-footer">
         <div className="container">
-          <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex flex-column flex-md-row align-items-center justify-content-between">
             <div className="d-flex align-items-center gap-3">
               {" "}
               <div className="logo">B</div>
               <div className="logo-text">Broolyn</div>
             </div>
             <div className="footer-links">
-              <ul class="d-flex gap-3">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    Home
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    About
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    Process
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link">Services</a>
-                </li>
-                <li class="nav-item mx-2">
-                  <a class="" href="#">
-                    Contact
-                  </a>
-                </li>
-              </ul>
+              <div class="d-flex gap-3 flex-md-row flex-column">
+                <a class="nav-link" href="#home">
+                  Home
+                </a>
+                <a class="nav-link" href="#about">
+                  About
+                </a>
+                <a class="nav-link" href="#portfolio">
+                  Portfolio
+                </a>
+                <a class="nav-link" href="#services">
+                  Services
+                </a>
+                <a class="" href="#contact">
+                  Contact
+                </a>
+              </div>
             </div>
             <div className="copyright">
               Copyright © {new Date().getFullYear()} All rights reserved

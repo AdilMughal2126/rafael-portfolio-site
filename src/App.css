@@ -1,3 +1,8 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* Global */
 .title {
   font-family: Work Sans;
@@ -27,6 +32,11 @@
   justify-content: center;
   color: white;
   background-color: #A53DFF;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 56px;
+  letter-spacing: 0%;
+
 
 }
 
@@ -350,6 +360,7 @@
 
 .footer-section {
   width: 100%;
+
   .footer-card {
     box-shadow: 0px 59px 124px 0px #0000001F;
     border-radius: 15px;
@@ -453,4 +464,50 @@
     color: white;
   }
 
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 768px) {
+  .intro-wrapper {
+    padding: 32px;
+
+    .profil-image{
+      margin-bottom: 2rem;
+    }
+    .heading{
+      font-size: 30px;
+      line-height: 34px;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .discuss-project-section{
+    padding: 50px 0px;
+
+    .description{
+      text-align: left;
+    }
+  }
+
+  .footer-card{
+    padding: 12px !important;
+  }
+
+  .row{
+    margin: 0 !important;
+  }
+  
+  .hero-heading{
+    font-size: 56px;
+    line-height: 64px;
+  }
+
+  .bottom-footer{
+    padding: 50px 0px;
+  }
+  .copyright{
+    margin-top: 1rem;
+  }
 }

@@ -4,7 +4,7 @@ import { projects } from "../data/projects";
 
 const PortfolioSection = () => {
   return (
-    <div className="container py-5">
+    <div className="container py-5" id="portfolio">
       <div className="portfolio-section">
         <div className="d-flex flex-column align-items-center justify-content-center">
           <div className="title">Portfolio</div>
