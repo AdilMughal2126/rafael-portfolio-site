@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/anewdayanalytics/rafael-portfolio",
+  "homepage": "https://anewdayanalytics.github.io/rafael-portfolio/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
